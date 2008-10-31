@@ -36,5 +36,5 @@ client like mpdscribble for this.
 
 %files
 %defattr(-,root,root)
-%{_datadir}/gmpc/plugins/lastfmplugin.la
-%{_datadir}/gmpc/plugins/lastfmplugin.so
+%{_libdir}/gmpc/plugins/lastfmplugin.la
+%{_libdir}/gmpc/plugins/lastfmplugin.so
