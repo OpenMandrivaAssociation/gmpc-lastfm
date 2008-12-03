@@ -28,8 +28,11 @@ client like mpdscribble for this.
 
 %install
 [ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
-
 %makeinstall_std
+
+%if "%_libdir" != "%_prefix/lib"
+mv %buildroot%_prefix/lib %buildroot%_libdir
+%endif
 
 %clean
 [ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
