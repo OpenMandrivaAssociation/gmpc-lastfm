@@ -19,7 +19,7 @@ This plugin doesn't scrobble your music, use a dedicated
 client like mpdscribble for this.
 
 %prep
-%setup -qn gmpc-last.fm-%{version}
+%setup -qn gmpc-last-fm-%{version}
 
 %build
 %configure2_5x
