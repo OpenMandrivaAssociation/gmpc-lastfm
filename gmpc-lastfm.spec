@@ -1,11 +1,11 @@
 Summary:	A Last.FM artist art provider plugin for gmpc
 Name:		gmpc-lastfm
-Version:	0.16.1
-Release:	%mkrel 2
+Version:	0.17.0
+Release:	%mkrel 1
 License:	GPLv2+
 Group:		Sound
 Url:		http://www.sarine.nl//gmpc-plugins-lastfm
-Source0:	http://download.sarine.nl/Programs/gmpc/%{version}/gmpc-last.fm-%{version}.tar.gz
+Source0:	http://download.sarine.nl/Programs/gmpc/%{version}/gmpc-last.fm-%{version}.tar.bz2
 BuildRequires:	libmpd-devel
 BuildRequires:	libxml2-devel
 BuildRequires:	libglade2.0-devel
@@ -29,10 +29,6 @@ client like mpdscribble for this.
 %install
 [ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
 %makeinstall_std
-
-%if "%_libdir" != "%_prefix/lib"
-mv %buildroot%_prefix/lib %buildroot%_libdir
-%endif
 
 %clean
 [ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
