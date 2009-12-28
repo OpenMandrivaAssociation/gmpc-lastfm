@@ -1,6 +1,6 @@
 Summary:	A Last.FM artist art provider plugin for gmpc
 Name:		gmpc-lastfm
-Version:	0.18.0
+Version:	0.19.0
 Release:	%mkrel 1
 License:	GPLv2+
 Group:		Sound
@@ -10,6 +10,7 @@ BuildRequires:	libmpd-devel >= 0.15.98
 BuildRequires:	libxml2-devel 
 BuildRequires:	gtk+2-devel >= 2.8
 BuildRequires:	gmpc-devel >= 0.16.2
+BuildRequires:	intltool
 Requires:	gmpc
 BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
@@ -29,10 +30,12 @@ client like mpdscribble for this.
 [ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
 %makeinstall_std
 
+%find_lang %name
+
 %clean
 [ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
 
-%files
+%files -f %name.lang
 %defattr(-,root,root)
 %{_libdir}/gmpc/plugins/lastfmplugin.la
 %{_libdir}/gmpc/plugins/lastfmplugin.so
