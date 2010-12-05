@@ -1,7 +1,7 @@
 Summary:	A Last.FM artist art provider plugin for gmpc
 Name:		gmpc-lastfm
 Version:	0.20.0
-Release:	%mkrel 1
+Release:	%mkrel 2
 License:	GPLv2+
 Group:		Sound
 Url:		http://www.sarine.nl//gmpc-plugins-lastfm
