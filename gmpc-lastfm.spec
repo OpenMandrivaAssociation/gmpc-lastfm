@@ -6,6 +6,11 @@ License:	GPLv2+
 Group:		Sound
 Url:		https://www.sarine.nl//gmpc-plugins-lastfm
 Source0:	http://download.sarine.nl/Programs/gmpc/%{version}/gmpc-last-fm-%{version}.tar.gz
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	libmpd-devel >= 0.15.98
 BuildRequires:	libxml2-devel 
 BuildRequires:	gtk+2-devel >= 2.8
